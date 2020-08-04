@@ -8,7 +8,7 @@ class HomePage extends StatefulWidget {
 
 
 
-class _HomePageState extends State<HomePage> {
+class _HomePageState extends State<HomePage>{
 
   bool isSignedIn= false;
 
