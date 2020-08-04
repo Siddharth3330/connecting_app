@@ -14,9 +14,8 @@ class Start extends StatefulWidget {
 class _StartState extends State<Start> {
   @override
   void initState() {
-    // TODO: implement initState
-    super.initState();
     startTimer();
+    super.initState();
   }
 
   startTimer() async {

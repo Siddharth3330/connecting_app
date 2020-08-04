@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "394539894444",
+    "firebase_url": "https://connectingapp-55969.firebaseio.com",
+    "project_id": "connectingapp-55969",
+    "storage_bucket": "connectingapp-55969.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:394539894444:android:8ddd9c8935cbef7be14109",
+        "android_client_info": {
+          "package_name": "com.siddharthsingh58000.connecting_app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "394539894444-oatmf5rsiokds72l6bbks4olgd591h95.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCUOqsrEFYGVhu3THlNWzaAWoNjvRItJpk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "394539894444-oatmf5rsiokds72l6bbks4olgd591h95.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
