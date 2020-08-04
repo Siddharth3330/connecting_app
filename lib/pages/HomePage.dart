@@ -1,3 +1,8 @@
+import 'package:connecting_app/pages/NotificationsPage.dart';
+import 'package:connecting_app/pages/ProfilePage1.dart';
+import 'package:connecting_app/pages/SearchPage.dart';
+import 'package:connecting_app/pages/TimeLinePage.dart';
+import 'package:connecting_app/pages/UploadPage.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
 
@@ -12,8 +17,19 @@ class _HomePageState extends State<HomePage>{
 
   bool isSignedIn= false;
 
-  Widget buildHomeScreen(){
-    return Text('already singed in');
+  Scaffold buildHomeScreen(){
+    //return Text('already singed in');
+  return Scaffold(
+    body: PageView(
+      children: <Widget>[
+         TimeLinePage(),
+         SearchPage(),
+        UploadPage(),
+        NotificationsPage(),
+        ProfilePage1(),
+      ],
+    ),
+  );
   }
 
   //fuction to call our Signin or Signup activity
