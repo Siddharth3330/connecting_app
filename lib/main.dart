@@ -1,4 +1,3 @@
-import 'package:connecting_app/pages/HomePage.dart';
 import 'package:connecting_app/pages/StartPage.dart';
 import 'package:flutter/material.dart';
 
