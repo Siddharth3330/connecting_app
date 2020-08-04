@@ -23,7 +23,7 @@ class MyApp extends StatelessWidget {
         // Notice that the counter didn't reset back to zero; the application
         // is not restarted.,
         primaryColor: Colors.grey,
-       accentColor: Colors.blue,
+        accentColor: Colors.blue,
        // scaffoldBackgroundColor: Colors.white,
         primarySwatch: Colors.brown,
         // This makes the visual density adapt to the platform that you run
