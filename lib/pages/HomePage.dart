@@ -5,6 +5,9 @@ import 'package:connecting_app/pages/TimeLinePage.dart';
 import 'package:connecting_app/pages/UploadPage.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
+import 'package:google_sign_in/google_sign_in.dart';
+
+final GoogleSignIn gSignIn = GoogleSignIn();
 
 class HomePage extends StatefulWidget {
   @override
@@ -17,9 +20,48 @@ class _HomePageState extends State<HomePage>{
 
   bool isSignedIn= false;
 
-  Scaffold buildHomeScreen(){
+  void intState(){
+    super.initState();
+
+    gSignIn.onCurrentUserChanged.listen((gSigninAccount) {
+      controlSignIn(gSigninAccount);
+    }, onError: (gError){
+      print('Error occured  '+ gError);
+    });
+
+    gSignIn.signInSilently(suppressErrors: false).then((gSigninAccount){
+      controlSignIn(gSigninAccount);
+    }).catchError((gError){
+      print('Error occured  '+ gError);
+    });
+  }
+
+
+  controlSignIn(GoogleSignInAccount signInAccount) async{
+  if (signInAccount != null){
+       setState(() {
+         isSignedIn = true;
+       });
+  }else{
+    setState(() {
+      isSignedIn = false;
+    });
+  }
+  }
+
+  logInUser(){
+   gSignIn.signIn();
+
+}
+
+  logOutUser(){
+    gSignIn.signOut();
+  }
+
+  Widget buildHomeScreen(){
+    return RaisedButton.icon(onPressed: logOutUser, icon: Icon(Icons.close), label: Text('Sign Out'));
     //return Text('already singed in');
-  return Scaffold(
+  /*return Scaffold(
     body: PageView(
       children: <Widget>[
          TimeLinePage(),
@@ -29,7 +71,7 @@ class _HomePageState extends State<HomePage>{
         ProfilePage1(),
       ],
     ),
-  );
+  );*/
   }
 
   //function to call our SignIn or SignUp activity
@@ -72,7 +114,7 @@ class _HomePageState extends State<HomePage>{
                crossAxisAlignment: CrossAxisAlignment.center,
                children: <Widget>[
                  GestureDetector(
-                   onTap: ()=> 'button tapped',
+                   onTap: logInUser,
                    child: Container(
                      width: 270, height: 65,
                      decoration: BoxDecoration(
