@@ -35,7 +35,8 @@ class _HomePageState extends State<HomePage>{
   //function to call our SignIn or SignUp activity
   Scaffold buildSignInScreen(){
          return Scaffold(
-           body: Center(
+
+           body:/* Center(
              child: OutlineButton(
                splashColor: Colors.grey,
                onPressed: () {},
@@ -63,7 +64,31 @@ class _HomePageState extends State<HomePage>{
                  ),
                ),
              ),
-           ),
+           ),*/
+           Container(
+             alignment: Alignment.center,
+             child: (Column(
+               mainAxisAlignment: MainAxisAlignment.center,
+               crossAxisAlignment: CrossAxisAlignment.center,
+               children: <Widget>[
+                 GestureDetector(
+                   onTap: ()=> 'button tapped',
+                   child: Container(
+                     width: 270, height: 65,
+                     decoration: BoxDecoration(
+                       image: DecorationImage(
+                         image: AssetImage('assets/images/google_signin_button.png'),
+                         fit: BoxFit.cover,
+                       )
+                     ),
+                   ),
+                 )
+               ],
+             )
+
+             ),
+           )
+
          );
   }
 

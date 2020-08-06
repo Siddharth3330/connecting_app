@@ -45,8 +45,7 @@ flutter:
   uses-material-design: true
 
   # To add assets to your application, add an assets section, like this:
-  assets:
-     - assets/images/
+
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.
@@ -63,6 +62,13 @@ flutter:
      - family: Signatra
        fonts:
           - asset: assets/fonts/Signatra.ttf
+
+  assets:
+    - assets/images/google_signin_button.png
+
+
+
+
   #       - asset: fonts/Schyler-Italic.ttf
   #         style: italic
   #   - family: Trajan Pro

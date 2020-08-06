@@ -23,7 +23,7 @@ class MyApp extends StatelessWidget {
         // is not restarted.,
         primaryColor: Colors.grey,
         accentColor: Colors.blue,
-       // scaffoldBackgroundColor: Colors.white,
+        scaffoldBackgroundColor: Colors.grey,
         primarySwatch: Colors.brown,
         // This makes the visual density adapt to the platform that you run
         // the app on. For desktop platforms, the controls will be smaller and
